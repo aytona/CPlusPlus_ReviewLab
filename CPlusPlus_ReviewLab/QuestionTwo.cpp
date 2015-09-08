@@ -14,11 +14,12 @@ string PigLatinify(string &word)
 
 	if (word[0] == 'q')
 	{
+		char secondLetter;
 		firstLetter = word[0];
-		new_word.erase(new_word.begin());
-		new_word.erase(new_word.begin());
+		secondLetter = word[1];
+		new_word.erase(new_word.begin(), new_word.begin()+2);
 		new_word += firstLetter;
-		new_word += "u";
+		new_word += secondLetter;
 	}
 
 	else if (word[0] != 'a' || 'e' || 'i' || 'o' || 'u')

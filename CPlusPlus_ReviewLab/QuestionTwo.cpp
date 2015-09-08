@@ -6,25 +6,23 @@
 #include <string>
 using namespace std;
 
-string PigLatinify(string &word)
+string PigLatinify(string word)
 {
 	string new_word;
-	char firstLetter;
+	char firstLetter = word[0];
+	char secondLetter = word[1];
 	new_word = word;
 
-	if (word[0] == 'q')
+	// Check to see if the first letter starts with a q
+	if (firstLetter == 'q')
 	{
-		char secondLetter;
-		firstLetter = word[0];
-		secondLetter = word[1];
 		new_word.erase(new_word.begin(), new_word.begin()+2);
 		new_word += firstLetter;
 		new_word += secondLetter;
 	}
-
-	else if (word[0] != 'a' || 'e' || 'i' || 'o' || 'u')
+	// Check to see if the first letter starts with a vowel
+	else if (firstLetter != 'a' && firstLetter != 'e' && firstLetter != 'i' && firstLetter != 'o' && firstLetter != 'u')
 	{
-		firstLetter = word[0];
 		new_word.erase(new_word.begin());
 		new_word += firstLetter;
 	}

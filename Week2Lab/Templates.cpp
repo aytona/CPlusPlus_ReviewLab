@@ -49,10 +49,6 @@ public:
 		width = i;
 		height = y;
 	}
-	void SetArea(T areaValue)
-	{
-		area = areaValue;
-	}
 	bool operator < (Rectangle &otherRect)
 	{
 		return area < otherRect.GetArea();

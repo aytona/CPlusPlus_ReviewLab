@@ -7,9 +7,9 @@ void TestCircles()
 {
 	OrderedArray<Circle<int>> array(3);
 
-	array.push(Circle<int>(3));
-	array.push(Circle<int>(1));
-	array.push(Circle<int>(2));
+	array.push(Circle<int>(15));
+	array.push(Circle<int>(8));
+	array.push(Circle<int>(10));
 	cout << "Ordered circles array contents: ";
 
 	for (int i = 0; i < array.GetSize(); i++)

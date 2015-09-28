@@ -169,29 +169,18 @@ public:
 			Expand();
 		}
 		
-		int k;
+		int i, k;
 		int lowerBound = 0;
 		int upperBound = m_numElements - 1;
 		int current = 0;
-
-		// Linear Search
-		/*for (i = 0; i < m_numElements; i++)
-		{
-			if (m_array[i] > val)
-				break;
-		}*/
 		
-		while (upperBound >= lowerBound)
+		while (lowerBound <= upperBound)
 		{
 			current = (lowerBound + upperBound) >> 1;
 
 			if (m_array[current] == val)
 			{
-				return current;
-			}
-			else if (lowerBound > upperBound)
-			{
-				// 
+				upperBound = current - 1;
 				break;
 			}
 			else
@@ -202,13 +191,15 @@ public:
 					upperBound = current - 1;
 			}
 		}
+		
+		i = upperBound + 1;
 
 		for (k = m_numElements; k > i; k--)
 		{
 			m_array[k] = m_array[k - 1];
 		}
 
-		m_array[current] = val;
+		m_array[i] = val;
 		m_numElements++;
 
 		return i;

@@ -12,6 +12,7 @@ public:
 	{
 		return radius;
 	}
+	Circle() { }
 	Circle(T i)
 	{
 		radius = i;
@@ -29,7 +30,7 @@ public:
 		return radius == target.GetRadius();
 	}
 	template <typename T>
-	std::ostream& operator<< (std::ostream& out, const Circle<T> &target)
+	friend std::ostream& operator<< (std::ostream& out, const Circle<T> &target);
 };
 
 #endif

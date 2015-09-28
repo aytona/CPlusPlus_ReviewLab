@@ -17,11 +17,17 @@ void TestCircles()
 		cout << array[i] << " ";
 	}
 	cout << endl;
+}
 
-	template <typename T>
-	std::ostream& operator<< (std::ostream& out, const Circle<T> &target)
-	{
-		out << target.radiusl;
-		return out;
-	}
+template <typename T>
+std::ostream& operator<< (std::ostream& out, const Circle<T> &target)
+{
+	out << target.radius;
+	return out;
+}
+
+int main()
+{
+	TestCircles();
+	return 0;
 }

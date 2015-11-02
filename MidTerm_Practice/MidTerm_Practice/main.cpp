@@ -39,8 +39,7 @@ void OrderedArrayTest()
 		std::cout << array[i] << " ";
 	std::cout << std::endl;
 	std::cout << "Search for 12 was found at index: ";
-	std::cout << array.search(12);
-	std::cout << std::endl;
+	std::cout << array.search(12) << std::endl;;
 }
 
 void BitArrayTest()

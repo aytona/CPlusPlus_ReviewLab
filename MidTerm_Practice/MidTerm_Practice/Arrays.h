@@ -1,5 +1,3 @@
-#include <assert.h>
-
 #ifndef _ARRAYS_H_
 #define _ARRAYS_H_
 

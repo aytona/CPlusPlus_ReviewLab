@@ -1,5 +1,4 @@
-#include "Arrays.h"
-#include <iostream>
+#include "Main.h"
 using namespace std;
 
 const int SENTINEL = -99;
@@ -60,13 +59,13 @@ int main()
 		case 1:
 			UnorderedArrayTest();
 			break;
-			
+
 		case 2:
 			OrderedArrayTest();
 			break;
 
 		default:
-			cout << "Invalid input!" << endl <<  "Type -99 to end" << endl;
+			cout << "Invalid input!" << endl << "Type -99 to end" << endl;
 			break;
 		}
 	} while (input != SENTINEL);

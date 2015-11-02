@@ -12,3 +12,4 @@
 
 #include "BitArray.h"
 #include "Arrays.h"
+#include "SinglyLinkedList.h"""

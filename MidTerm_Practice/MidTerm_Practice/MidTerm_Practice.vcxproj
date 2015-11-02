@@ -67,6 +67,7 @@
     <ClInclude Include="Arrays.h" />
     <ClInclude Include="BitArray.h" />
     <ClInclude Include="Main.h" />
+    <ClInclude Include="SinglyLinkedList.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />

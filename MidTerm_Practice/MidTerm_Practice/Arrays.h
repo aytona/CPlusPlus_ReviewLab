@@ -1,7 +1,7 @@
+#include <assert.h>
+
 #ifndef _ARRAYS_H_
 #define _ARRAYS_H_
-
-#include <assert.h>
 
 template<typename T>
 class UnorderedArray
@@ -19,7 +19,7 @@ private:
 			return false;
 
 		T *temp = new T[m_maxSize + m_growSize];
-		assert(temp != NULL);
+		assert(temp != 0);
 		memcpy(temp, m_array, sizeof(T) * m_maxSize);
 		delete[] m_array;
 		m_array = temp;
@@ -28,7 +28,9 @@ private:
 	}
 
 public:
-	UnorderedArray(int size, int growBy = 1) : m_array(NULL), m_maxSize(0), m_growSize(0), m_numElements(0)
+	UnorderedArray(int size, int growBy = 1) :
+		m_array(0), m_maxSize(0),
+		m_growSize(0), m_numElements(0)
 	{
 		if (size)
 		{
@@ -40,16 +42,16 @@ public:
 	}
 	~UnorderedArray()
 	{
-		if (m_array != NULL)
+		if (m_array != 0)
 		{
 			delete[] m_array;
-			m_array = NULL;
+			m_array = 0;
 		}
 	}
 
 	void push(T val)
 	{
-		assert(m_array != NULL);
+		assert(m_array != 0);
 		if (m_numElements >= m_maxSize)
 			Expand();
 		m_array[m_numElements] = val;
@@ -62,7 +64,7 @@ public:
 	}
 	void remove(int index)
 	{
-		assert(m_array != NULL);
+		assert(m_array != 0);
 		if (index >= m_maxSize)
 			return;
 		for (int k = index; k < m_maxSize - 1; k++)
@@ -74,13 +76,13 @@ public:
 
 	T& operator[](int index)
 	{
-		assert(m_array != NULL && index <= m_numElements);
+		assert(m_array != 0 && index <= m_numElements);
 		return m_array[index];
 	}
 
 	int search(T val)
 	{
-		assert(m_array != NULL);
+		assert(m_array != 0);
 		for (int i = 0; i < m_numElements; i++)
 		{
 			if (m_array[i] == val)
@@ -91,7 +93,7 @@ public:
 
 	void BubbleSort()
 	{
-		assert(m_array != NULL);
+		assert(m_array != 0);
 		for (int k = m_numElements - 1; k > 0; k--)
 		{
 			bool sorted;
@@ -138,7 +140,7 @@ private:
 			return false;
 
 		T *temp = new T[m_maxSize + m_growSize];
-		assert(temp != NULL);
+		assert(temp != 0);
 		memcpy(temp, m_array, sizeof(T) * m_maxSize);
 		delete[] m_array;
 		m_array = temp;
@@ -147,7 +149,7 @@ private:
 	}
 
 public:
-	OrderedArray(int size, int growBy = 1) : m_array(NULL), m_maxSize(0), m_growSize(0), m_numElements(0)
+	OrderedArray(int size, int growBy = 1) : m_array(0), m_maxSize(0), m_growSize(0), m_numElements(0)
 	{
 		if (size)
 		{
@@ -159,16 +161,16 @@ public:
 	}
 	~OrderedArray()
 	{
-		if (m_array != NULL)
+		if (m_array != 0)
 		{
 			delete[] m_array;
-			m_array = NULL;
+			m_array = 0;
 		}
 	}
 
 	int push(T val)
 	{
-		assert(m_array != NULL);
+		assert(m_array != 0);
 		if (m_numElements >= m_maxSize)
 			Expand();
 		int i, k;
@@ -207,7 +209,7 @@ public:
 	}
 	void remove(int index)
 	{
-		assert(m_array != NULL);
+		assert(m_array != 0);
 		if (index >= m_maxSize)
 			return;
 		for (int k = index; k < m_maxSize; k++)
@@ -219,13 +221,13 @@ public:
 
 	const T& operator[] (int index)
 	{
-		asset(m_array != NULL && index <= m_numElements);
+		assert(m_array != 0 && index <= m_numElements);
 		return m_array[index];
 	}
 
 	int search(T searchKey)
 	{
-		assert(m_array != NULL);
+		assert(m_array != 0);
 		int lowerBound = 0;
 		int upperBound = m_numElements - 1;
 		int current = 0;

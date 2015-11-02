@@ -1,5 +1,4 @@
 #include "Main.h"
-using namespace std;
 
 const int SENTINEL = -99;
 
@@ -15,13 +14,13 @@ void UnorderedArrayTest()
 	array.pop();
 	array.remove(2);
 
-	cout << "Unordered array contents: ";
+	std::cout << "Unordered array contents: ";
 	for (int i = 0; i < array.GetSize(); i++)
-		cout << array[i] << " ";
-	cout << endl;
-	cout << "Search for 53 was found at index: ";
-	cout << array.search(53);
-	cout << endl;
+		std::cout << array[i] << " ";
+	std::cout << std::endl;
+	std::cout << "Search for 53 was found at index: ";
+	std::cout << array.search(53);
+	std::cout << std::endl;
 }
 
 void OrderedArrayTest()
@@ -35,25 +34,50 @@ void OrderedArrayTest()
 	array.pop();
 	array.remove(2);
 
-	cout << "Ordered array contents: ";
+	std::cout << "Ordered array contents: ";
 	for (int i = 0; i < array.GetSize(); i++)
-		cout << array[i] << " ";
-	cout << endl;
-	cout << "Search for 12 was found at index: ";
-	cout << array.search(12);
-	cout << endl;
+		std::cout << array[i] << " ";
+	std::cout << std::endl;
+	std::cout << "Search for 12 was found at index: ";
+	std::cout << array.search(12);
+	std::cout << std::endl;
+}
+
+void BitArrayTest()
+{
+	BitArray bitArray(16);
+	std::cout << "Bit 2 = " << bitArray[2] << std::endl;
+	std::cout << "Bit 3 = " << bitArray[3] << std::endl;
+	std::cout << "Bit 14 = " << bitArray[14] << std::endl;
+	bitArray.SetBit(2);
+	bitArray.SetBit(14);
+	std::cout << "SetBit: " << std::endl;
+	std::cout << "Bit 2 = " << bitArray[2] << std::endl;
+	std::cout << "Bit 3 = " << bitArray[3] << std::endl;
+	std::cout << "Bit 14 = " << bitArray[14] << std::endl;
+	bitArray.SetAllBits();
+	std::cout << "SetAllBits: " << std::endl;
+	std::cout << "Bit 2 = " << bitArray[2] << std::endl;
+	std::cout << "Bit 3 = " << bitArray[3] << std::endl;
+	std::cout << "Bit 14 = " << bitArray[14] << std::endl;
+	bitArray.ClearAllBits();
+	std::cout << "ClearAllBits: " << std::endl;
+	std::cout << "Bit 2 = " << bitArray[2] << std::endl;
+	std::cout << "Bit 3 = " << bitArray[3] << std::endl;
+	std::cout << "Bit 14 = " << bitArray[14] << std::endl;
 }
 
 int main()
 {
 	int input;
-	cout << "Midterm Practice Programs:\n"
+	std::cout << "Midterm Practice Programs:\n"
 		<< "Unordered Array: 1\n"
-		<< "Ordered Array: 2\n";
+		<< "Ordered Array: 2\n"
+		<< "Bit Array: 3\n";
 	do
 	{
-		cout << "Input test number: ";
-		cin >> input;
+		std::cout << "Input test number: ";
+		std::cin >> input;
 		switch (input)
 		{
 		case 1:
@@ -64,8 +88,12 @@ int main()
 			OrderedArrayTest();
 			break;
 
+		case 3:
+			BitArrayTest();
+			break;
+
 		default:
-			cout << "Invalid input!" << endl << "Type -99 to end" << endl;
+			std::cout << "Invalid input!" << std::endl << "Type -99 to end" << std::endl;
 			break;
 		}
 	} while (input != SENTINEL);

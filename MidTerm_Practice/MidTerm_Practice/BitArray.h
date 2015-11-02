@@ -17,7 +17,7 @@ public:
 		for (unsigned int i = 0; i < m_totalBytes; i++)
 			m_bits.push_back(0);
 	}
-	~BitArray();
+	~BitArray() {}
 
 	void ClearAllBits()
 	{

@@ -11,5 +11,7 @@
 #include <iostream>
 
 #include "BitArray.h"
-#include "Arrays.h"
-#include "SinglyLinkedList.h"""
+#include "UnorderedArray.h"
+#include "OrderedArray.h"
+#include "SinglyLinkedList.h"
+#include "DoublyLinkedList.h"

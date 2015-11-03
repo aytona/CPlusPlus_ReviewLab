@@ -64,13 +64,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Arrays.h" />
+    <ClInclude Include="DoublyLinkedList.h" />
+    <ClInclude Include="UnorderedArray.h" />
     <ClInclude Include="BitArray.h" />
     <ClInclude Include="Main.h" />
+    <ClInclude Include="OrderedArray.h" />
     <ClInclude Include="SinglyLinkedList.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BitArray.cpp" />
+    <ClCompile Include="DoublyLinkedListcpp.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="OrderedArray.cpp" />
+    <ClCompile Include="SinglyLinkedList.cpp" />
+    <ClCompile Include="UnorderedArray.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

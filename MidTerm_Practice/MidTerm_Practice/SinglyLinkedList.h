@@ -62,7 +62,7 @@ public:
 	}
 };
 
-template<typname T>
+template<typename T>
 class LinkList
 {
 private:

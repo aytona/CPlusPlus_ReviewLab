@@ -1,13 +1,5 @@
 #include "Main.h"
 
-const int SENTINEL = -99;
-
-void UnorderedArrayTest();
-void OrderedArrayTest();
-void BitArrayTest();
-void SinglyLinkedListTest();
-void DoublyLinkedListTest();
-
 int main()
 {
 	int input;
@@ -15,8 +7,8 @@ int main()
 		<< "Unordered Array: 1\n"
 		<< "Ordered Array: 2\n"
 		<< "Bit Array: 3\n"
-		<< "Singly Linked List: 4"
-		<< "Doubly Linked List: 5";
+		<< "Singly Linked List: 4\n"
+		<< "Doubly Linked List: 5\n";
 	do
 	{
 		std::cout << "Input test number: ";

@@ -6,6 +6,8 @@
 #define MIN_CHARS(bits)		((((bits) - 1) / CHAR_BIT) + 1)
 #define MAX_UCHAR			0xff
 
+const int SENTINEL = -99;
+
 #include <vector>
 #include <assert.h>
 #include <iostream>
@@ -15,3 +17,9 @@
 #include "OrderedArray.h"
 #include "SinglyLinkedList.h"
 #include "DoublyLinkedList.h"
+
+void UnorderedArrayTest();
+void OrderedArrayTest();
+void BitArrayTest();
+void SinglyLinkedListTest();
+void DoublyLinkedListTest();

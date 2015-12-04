@@ -16,6 +16,7 @@ Finals are:
 #include "ArraybasedStack.h"
 #include "UnorderedArray.h"
 #include "UnorderedArrayStack.h"
+#include "OrderedArray.h"
 
 #define NULL = 0;
 

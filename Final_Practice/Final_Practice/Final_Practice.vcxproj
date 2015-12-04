@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArraybasedStack.h" />
+    <ClInclude Include="OrderedArray.h" />
     <ClInclude Include="UnorderedArray.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="UnorderedArrayStack.h" />

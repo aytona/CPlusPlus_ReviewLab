@@ -29,5 +29,11 @@
     <ClInclude Include="ArraybasedStack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="UnorderedArrayStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UnorderedArray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

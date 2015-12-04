@@ -12,12 +12,16 @@ Finals are:
 #pragma once
 
 #include <iostream>
+#include <cassert>
+#include "ArraybasedStack.h"
+
+#define NULL = 0;
 
 const int SENTINEL = -99;
-void StacksTest();
-void QueuesTest();
-void HashTablesTest();
-void TreesTest();
-void AdvancedSortingTest();
-void HeapsTest();
-void GraphsTest();
+void ArraybasedStacksTest();
+//void QueuesTest();
+//void HashTablesTest();
+//void TreesTest();
+//void AdvancedSortingTest();
+//void HeapsTest();
+//void GraphsTest();

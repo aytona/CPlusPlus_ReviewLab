@@ -18,10 +18,10 @@ int main()
 		switch (input)
 		{
 		case 1:
-			StacksTest();
+			ArraybasedStacksTest();
 			break;
 
-		case 2:
+		/*case 2:
 			QueuesTest();
 			break;
 
@@ -43,7 +43,7 @@ int main()
 
 		case 7:
 			GraphsTest();
-			break;
+			break;*/
 
 		default:
 			std::cout << "Invalid input!\n"

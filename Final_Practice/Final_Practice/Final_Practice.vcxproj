@@ -65,6 +65,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ArraybasedStack.cpp" />
+    <ClCompile Include="CharacterMatching.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -72,7 +73,6 @@
     <ClInclude Include="OrderedArray.h" />
     <ClInclude Include="UnorderedArray.h" />
     <ClInclude Include="Main.h" />
-    <ClInclude Include="UnorderedArrayStack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

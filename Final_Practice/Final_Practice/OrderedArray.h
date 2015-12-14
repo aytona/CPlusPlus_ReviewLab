@@ -1,6 +1,7 @@
 #ifndef _ORDERED_ARRAY_H_
 #define _ORDERED_ARRAY_H_
 
+// Standard Ordered Array class
 template <typename T>
 class OrderedArray
 {

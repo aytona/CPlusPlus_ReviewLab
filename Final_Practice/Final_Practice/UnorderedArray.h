@@ -1,6 +1,7 @@
 #ifndef _UNORDERED_ARRAY_H_
 #define _UNORDERED_ARRAY_H_
 
+// Standard Unordered Array class
 template<typename T>
 class UnorderedArray
 {
@@ -11,6 +12,7 @@ private:
 	int m_numElements;
 
 private:
+
 	bool Expand()
 	{
 		if (m_growSize <= 0)
@@ -55,6 +57,7 @@ private:
 	}
 
 public:
+	// Constructor
 	UnorderedArray(int size, int growBy = 1) : m_array(0), m_maxSize(0), m_growSize(0), m_numElements(0)
 	{
 		if (size)
@@ -65,6 +68,7 @@ public:
 			m_growSize = ((growBy > 0) ? growBy : 0);
 		}
 	}
+	// Deconstructor
 	~UnorderedArray()
 	{
 		if (m_array != 0)

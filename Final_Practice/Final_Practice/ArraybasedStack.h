@@ -2,6 +2,7 @@
 #define _ARRAY_BASED_STACK_
 #include "Main.h"
 
+// Stacks using arrays
 template<typename T>
 class ArraybasedStack
 {
@@ -58,10 +59,12 @@ public:
 	}
 
 	// Similar to removal
-	void pop()
+	const T& pop()
 	{
+		assert(m_array != NULL);
 		if (!isEmpty())
 			m_top--;
+		return m_array[m_top + 1];			// Removes and returns the element that is removed
 	}
 
 	// Acces of top-most element

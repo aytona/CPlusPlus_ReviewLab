@@ -21,15 +21,15 @@
     <ClCompile Include="ArraybasedStack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CharacterMatching.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ArraybasedStack.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="UnorderedArrayStack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="UnorderedArray.h">
